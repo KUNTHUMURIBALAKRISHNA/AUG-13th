@@ -1,0 +1,29 @@
+#include <stdio.h>
+int main()
+{
+    int arry1[100],arry2[100],n,i,*p,*p1;
+    p=&arry1;
+    p1=&arry2;
+    printf("enter the size of an array:\n");
+    scanf("%d",&n);
+    printf("enter elements in array1:\n");
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&*(p+i));
+    }
+    printf("array1 elements are:\n");
+    for(i=0;i<n;i++)
+    {
+        printf("%d\n",*(p+i));
+    }
+    for(i=0;i<n;i++)
+    {
+        *(p1+i)=*(p+i);
+    }
+    printf("elements in array2:\n");
+    for(i=0;i<n;i++)
+    {
+        printf("%d\n",*(p1+i));
+    }
+    return 0;
+}

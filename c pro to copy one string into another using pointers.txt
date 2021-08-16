@@ -1,0 +1,23 @@
+#include<stdio.h>
+
+void copy_string(char*, char*);
+
+main()
+{
+    char str1[100], str2[100];    
+    printf("Enter source string\n");    
+    gets(str1);    
+    copy_string(str2,str1);    
+    printf(" string2 is \"%s\"\n",str2);    
+    return 0;
+}
+void copy_string(char *str2, char *str1)
+{
+    while(*str1)
+    {
+        *str2 =*str1;        
+        str1++;        
+        str2++;
+    }    
+    *str2='\0';
+}
